@@ -6,9 +6,13 @@ body { background-color: #02111b; }
 h1 { background-color: #02111b; }
 </style>
 <title>MY Blog</title>
-<div>
-            <h1><font face="tahoma" color="white"><a href="/">MY BLOG</a></font></h1>
-</div>
+{% for post in posts %}
+    <div>
+        <p>published: {{ post.published_date }}</p>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+{% endfor %}
 
 <h1 align="center"><font face="verdana" color="white">INFORMATION</font></h1>
 <table align ="center" cellpadding="25">
