@@ -1,26 +1,16 @@
 <!DOCTYPE html>
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-#back{
-  padding: 25px;
-  background: url(bg.jpg);
-  background-repeat: repeat;
-  background-size: cover;
-}
-</style>
-<body id="back">
 <title>My Blog</title>
-<font color="white">
-<h1 align="center">Hey There! Welcome!</h1>
+<body bgcolor="#000000" > <font color="White">
+<h1 align="center">Hey There!</br>Welcome!</h1>
 {% for post in posts %}
-    <div><font color="white">
+    <div>
         <p>published: {{ post.published_date }}</p>
-        <h2><a href=""><font color="white">{{ post.title }}</font></a></h2>
+        <h2><a href="">{{ post.title }}</a></h2>
         <p>{{ post.text|linebreaksbr }}</p>
-    </font></div>
+    </div>
 {% endfor %}
 </font>
-
 </body>
 </html>
