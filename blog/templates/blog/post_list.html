@@ -2,38 +2,25 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-body { background-color: #7ff6f6; }
-h1 { background-color: #7ff6f6; }
+#back{
+  padding: 25px;
+  background: url(bg.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
 </style>
-<title>MY Blog</title>
+<body id="back">
+<title>My Blog</title>
+<font color="white">
+<h1 align="center">Hey There! Welcome!</h1>
 {% for post in posts %}
-    <div>
+    <div><font color="white">
         <p>published: {{ post.published_date }}</p>
-        <h2><a href="">{{ post.title }}</a></h2>
+        <h2><a href=""><font color="white">{{ post.title }}</font></a></h2>
         <p>{{ post.text|linebreaksbr }}</p>
-    </div>
+    </font></div>
 {% endfor %}
+</font>
 
-<h1 align="center"><font face="verdana" color="black">INFORMATION</font></h1>
-<table align ="center" cellpadding="25">
-<colgroup>
-    <col span="1" style="background-color:black">
-    <col style="background-color:black">
-  </colgroup>
-<tr>
-    <th><font face="calibri" color="white">Information Type</font></th>
-    <th><font  face="arial" color="white">Detail</font></th>
-</tr>
-<tr>
-<th><font face="calibri" color="white">Name</font> </th>
-<th><font face="arial" color="white">Tejas Kothari</font></th>
-</tr>
-<th><font face="calibri" color="white">Branch</font> </th>
-<th><font face="arial"  color="white">Computer Science</font></th>
-</tr>
-<tr>
-<th><font face="calibri" color="white">Year</font> </th>
-<th><font face="arial"  color="white">2nd</font></th>
-</tr>
 </body>
 </html>
